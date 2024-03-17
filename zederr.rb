@@ -6,33 +6,33 @@ class Zederr < Formula
   desc "A tool for error codes documentation and code generation.  You can define all the errors in one YAML file and generate strictly typed error constructors.  Error public messages are automatically localized on initialization based on the user locale.
 "
   homepage "https://github.com/amanbolat/zederr"
-  version "0.0.7-alpha"
+  version "0.0.8-alpha"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/amanbolat/zederr/releases/download/v0.0.7-alpha/zederr_0.0.7-alpha_darwin_all.tar.gz"
-    sha256 "96f2ffbab1f3971f8b294af07f77ef8f383b75265a7c6a252700d2e59a1120cb"
+    url "https://github.com/amanbolat/zederr/releases/download/v0.0.8-alpha/zederr_0.0.8-alpha_darwin_all.tar.gz"
+    sha256 "70de9a95bc04824d0dd71a38ddf86f5d3e838d3682bcd8258e76884e61836fa8"
 
     def install
-      bin.install "zederr_0.0.7-alpha"
+      bin.install zederr
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amanbolat/zederr/releases/download/v0.0.7-alpha/zederr_0.0.7-alpha_linux_arm64.tar.gz"
-      sha256 "b8b3b0a70648119e12950f851e9c6f35c3914356d4efa5606a395e796732b09a"
+      url "https://github.com/amanbolat/zederr/releases/download/v0.0.8-alpha/zederr_0.0.8-alpha_linux_arm64.tar.gz"
+      sha256 "ed1d55b59d38054a6726d75d7e8183e34ac71f934a0e7c32dbdf5d6fcb20d8d4"
 
       def install
-        bin.install "zederr"
+        bin.install zederr
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/amanbolat/zederr/releases/download/v0.0.7-alpha/zederr_0.0.7-alpha_linux_amd64.tar.gz"
-      sha256 "360e1a6d38b055e18faf7897d1015345ea88f73a8d775252e23a3e370e65a2f3"
+      url "https://github.com/amanbolat/zederr/releases/download/v0.0.8-alpha/zederr_0.0.8-alpha_linux_amd64.tar.gz"
+      sha256 "cd8fe3ff87ae853485aef5e7786e66154cfb099b3b76614b8035bf3f345d12c7"
 
       def install
-        bin.install "zederr"
+        bin.install zederr
       end
     end
   end
